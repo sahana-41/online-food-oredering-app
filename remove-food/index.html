@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Cart</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>My Cart</h1>
+        <p>Review and manage your food items</p>
+    </header>
+
+    <main class="cart-container">
+
+        <!-- Cart Items -->
+        <div id="cartItems">
+
+            <div class="cart-item" data-price="120">
+
+                <div class="food-info">
+                    <div class="food-image">🍕</div>
+
+                    <div>
+                        <h3>Veg Pizza</h3>
+                        <p>₹120</p>
+                    </div>
+                </div>
+
+                <button class="delete-btn" onclick="removeItem(this)">
+                    🗑️
+                </button>
+
+            </div>
+
+
+            <div class="cart-item" data-price="180">
+
+                <div class="food-info">
+                    <div class="food-image">🍔</div>
+
+                    <div>
+                        <h3>Chicken Burger</h3>
+                        <p>₹180</p>
+                    </div>
+                </div>
+
+                <button class="delete-btn" onclick="removeItem(this)">
+                    🗑️
+                </button>
+
+            </div>
+
+
+            <div class="cart-item" data-price="100">
+
+                <div class="food-info">
+                    <div class="food-image">🍨</div>
+
+                    <div>
+                        <h3>Ice Cream</h3>
+                        <p>₹100</p>
+                    </div>
+                </div>
+
+                <button class="delete-btn" onclick="removeItem(this)">
+                    🗑️
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Empty Cart -->
+        <div id="emptyCart" class="empty-cart hidden">
+
+            <div class="empty-icon">🛒</div>
+
+            <h2>Your cart is empty</h2>
+
+            <p>
+                You haven't added any food items to your cart.
+            </p>
+
+            <button onclick="browseMenu()" class="browse-btn">
+                Browse Menu
+            </button>
+
+        </div>
+
+
+        <!-- Cart Summary -->
+        <div id="cartSummary" class="cart-summary">
+
+            <div class="total-row">
+                <span>Subtotal</span>
+                <strong id="subtotal">₹400</strong>
+            </div>
+
+            <div class="total-row">
+                <span>Delivery Fee</span>
+                <strong>₹40</strong>
+            </div>
+
+            <hr>
+
+            <div class="total-row final-total">
+                <span>Total</span>
+                <strong id="total">₹440</strong>
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

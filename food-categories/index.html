@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Categories</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Our Menu</h1>
+        <p>Choose a category to explore our food</p>
+    </header>
+
+    <!-- Food Categories -->
+    <div class="categories">
+        <button class="category-btn active" data-category="all">
+            All Categories
+        </button>
+
+        <button class="category-btn" data-category="starters">
+            Starters
+        </button>
+
+        <button class="category-btn" data-category="mains">
+            Mains
+        </button>
+
+        <button class="category-btn" data-category="desserts">
+            Desserts
+        </button>
+
+        <button class="category-btn" data-category="beverages">
+            Beverages
+        </button>
+    </div>
+
+    <!-- Food Items -->
+    <div class="food-container">
+
+        <div class="food-card" data-category="starters">
+            <div class="food-image">🥗</div>
+            <h3>Veg Spring Rolls</h3>
+            <p>Fresh vegetable spring rolls</p>
+            <span>₹120</span>
+        </div>
+
+        <div class="food-card" data-category="starters">
+            <div class="food-image">🍗</div>
+            <h3>Chicken Wings</h3>
+            <p>Spicy crispy chicken wings</p>
+            <span>₹180</span>
+        </div>
+
+        <div class="food-card" data-category="mains">
+            <div class="food-image">🍕</div>
+            <h3>Veg Pizza</h3>
+            <p>Cheesy pizza with fresh vegetables</p>
+            <span>₹250</span>
+        </div>
+
+        <div class="food-card" data-category="mains">
+            <div class="food-image">🍔</div>
+            <h3>Chicken Burger</h3>
+            <p>Juicy chicken burger with cheese</p>
+            <span>₹200</span>
+        </div>
+
+        <div class="food-card" data-category="mains">
+            <div class="food-image">🍛</div>
+            <h3>Veg Biryani</h3>
+            <p>Flavourful vegetable biryani</p>
+            <span>₹180</span>
+        </div>
+
+        <div class="food-card" data-category="desserts">
+            <div class="food-image">🍰</div>
+            <h3>Chocolate Cake</h3>
+            <p>Rich chocolate cake</p>
+            <span>₹150</span>
+        </div>
+
+        <div class="food-card" data-category="desserts">
+            <div class="food-image">🍨</div>
+            <h3>Ice Cream</h3>
+            <p>Cold and creamy vanilla ice cream</p>
+            <span>₹100</span>
+        </div>
+
+        <div class="food-card" data-category="beverages">
+            <div class="food-image">🥤</div>
+            <h3>Cold Coffee</h3>
+            <p>Refreshing chilled coffee</p>
+            <span>₹120</span>
+        </div>
+
+        <div class="food-card" data-category="beverages">
+            <div class="food-image">🍹</div>
+            <h3>Fresh Juice</h3>
+            <p>Freshly prepared fruit juice</p>
+            <span>₹90</span>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

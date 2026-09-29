@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Delivery Addresses</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <h2>Foodie<span>Express</span></h2>
+    <a href="#checkout">Checkout</a>
+  </header>
+
+  <main class="container">
+    <section class="address-section">
+      <div class="heading">
+        <div>
+          <h1>Manage Addresses</h1>
+          <p>Save and manage your delivery locations.</p>
+        </div>
+        <button class="primary-btn" id="addBtn">
+          + Add Address
+        </button>
+      </div>
+
+      <div id="addressList" class="address-list"></div>
+
+      <div id="emptyState" class="empty-state">
+        <div class="empty-icon">📍</div>
+        <h3>No addresses saved yet</h3>
+        <p>Add your first delivery address to get started.</p>
+        <button class="primary-btn" id="emptyAddBtn">
+          Add Your First Address
+        </button>
+      </div>
+    </section>
+
+    <section class="checkout" id="checkout">
+      <h2>Checkout</h2>
+      <p>Select your delivery address.</p>
+
+      <div id="selectedAddress" class="selected-address">
+        No address selected
+      </div>
+
+      <button id="placeOrderBtn" class="primary-btn" disabled>
+        Continue to Payment
+      </button>
+      <p id="checkoutMessage" class="message"></p>
+    </section>
+  </main>
+
+  <!-- Add/Edit Address Modal -->
+  <div class="modal-overlay" id="modal">
+    <div class="modal">
+      <div class="modal-heading">
+        <h2 id="formTitle">Add New Address</h2>
+        <button class="close-btn" id="closeBtn">&times;</button>
+      </div>
+
+      <form id="addressForm">
+        <label for="label">Address Type</label>
+        <select id="label" required>
+          <option value="Home">Home</option>
+          <option value="Work">Work</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <label for="fullName">Full Name</label>
+        <input id="fullName" type="text" placeholder="Enter your name" required>
+
+        <label for="phone">Phone Number</label>
+        <input id="phone" type="tel" placeholder="10-digit mobile number"
+          pattern="[0-9]{10}" maxlength="10" required>
+
+        <label for="house">House / Flat / Building</label>
+        <input id="house" type="text" placeholder="House number" required>
+
+        <label for="street">Street / Area</label>
+        <input id="street" type="text" placeholder="Street or locality" required>
+
+        <div class="form-row">
+          <div>
+            <label for="city">City</label>
+            <input id="city" type="text" placeholder="City" required>
+          </div>
+          <div>
+            <label for="state">State</label>
+            <input id="state" type="text" placeholder="State" required>
+          </div>
+        </div>
+
+        <label for="pincode">PIN Code</label>
+        <input id="pincode" type="text" placeholder="6-digit PIN code"
+          pattern="[0-9]{6}" maxlength="6" required>
+
+        <label class="default-label">
+          <input type="checkbox" id="isDefault">
+          Set as default address
+        </label>
+
+        <div class="form-actions">
+          <button type="button" class="cancel-btn" id="cancelBtn">
+            Cancel
+          </button>
+          <button type="submit" class="primary-btn" id="saveBtn">
+            Save Address
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

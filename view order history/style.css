@@ -1,0 +1,179 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    padding: 30px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.intro {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+
+/* Order Card */
+
+.order-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.order-id {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.order-date {
+    color: #666;
+    margin-top: 5px;
+}
+
+
+/* Order Status */
+
+.order-status {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.status-delivered {
+    background-color: #dff5e1;
+    color: #247a2b;
+}
+
+.status-processing {
+    background-color: #fff1cc;
+    color: #856404;
+}
+
+.status-cancelled {
+    background-color: #f8d7da;
+    color: #842029;
+}
+
+
+/* Items */
+
+.order-items {
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+    margin-bottom: 15px;
+}
+
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 7px 0;
+}
+
+.item-name {
+    font-weight: 500;
+}
+
+.item-quantity {
+    color: #666;
+}
+
+
+/* Order Footer */
+
+.order-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.order-total {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+/* Reorder Button */
+
+.reorder-button {
+    border: none;
+    background-color: #333;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.reorder-button:hover {
+    background-color: #555;
+}
+
+
+/* No Orders */
+
+.no-orders {
+    display: none;
+    text-align: center;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.no-orders h2 {
+    margin-bottom: 10px;
+}
+
+.no-orders p {
+    color: #666;
+}
+
+
+/* Responsive */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .order-header,
+    .order-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .order-status {
+        align-self: flex-start;
+    }
+
+    .reorder-button {
+        width: 100%;
+    }
+}

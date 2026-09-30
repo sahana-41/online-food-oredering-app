@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Food</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Food Menu</h1>
+
+        <!-- Search Bar -->
+        <div class="search-container">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search for dishes or ingredients..."
+                autocomplete="off"
+            >
+
+            <button id="clearButton" type="button">×</button>
+        </div>
+
+        <!-- Food Items -->
+        <div id="foodList" class="food-list">
+
+            <div class="food-item" data-name="Chicken Biryani" data-ingredients="chicken rice spices">
+                <h2>Chicken Biryani</h2>
+                <p>Chicken, rice and aromatic spices</p>
+                <span>₹180</span>
+            </div>
+
+            <div class="food-item" data-name="Veg Biryani" data-ingredients="vegetables rice spices">
+                <h2>Veg Biryani</h2>
+                <p>Vegetables, rice and aromatic spices</p>
+                <span>₹140</span>
+            </div>
+
+            <div class="food-item" data-name="Chicken Burger" data-ingredients="chicken bread lettuce cheese">
+                <h2>Chicken Burger</h2>
+                <p>Chicken, bread, lettuce and cheese</p>
+                <span>₹150</span>
+            </div>
+
+            <div class="food-item" data-name="Margherita Pizza" data-ingredients="cheese tomato basil bread">
+                <h2>Margherita Pizza</h2>
+                <p>Tomato, cheese and fresh basil</p>
+                <span>₹200</span>
+            </div>
+
+            <div class="food-item" data-name="Paneer Butter Masala" data-ingredients="paneer tomato butter cream spices">
+                <h2>Paneer Butter Masala</h2>
+                <p>Paneer, tomato, butter and cream</p>
+                <span>₹170</span>
+            </div>
+
+            <div class="food-item" data-name="Masala Dosa" data-ingredients="rice potato lentils">
+                <h2>Masala Dosa</h2>
+                <p>Rice, lentils and potato filling</p>
+                <span>₹90</span>
+            </div>
+
+        </div>
+
+        <!-- No Results -->
+        <div id="noResults" class="no-results">
+            <h2>No items found</h2>
+            <p>Try searching with another dish name or ingredient.</p>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
